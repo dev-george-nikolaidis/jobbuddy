@@ -1,0 +1,37 @@
+.navigation {
+	grid-column: full-start / full-end;
+	height: 16.2rem;
+	background-image: url("../assets/desktop/bg-pattern-header.svg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	display: grid;
+	grid-template-columns: [full-start] minmax(14rem, auto) [col-start] repeat(12, minmax(6.5rem, 12rem)) minmax(14rem, auto) [full-end];
+	grid-template-rows: max-content;
+	grid-column-gap: 3rem;
+}
+
+.nav_wrapper {
+	grid-column: 2 / 14;
+	display: flex;
+	margin-top: 4.5rem;
+	justify-content: space-between;
+}
+
+.theme_container {
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+}
+
+.btn_icon {
+	font-size: 2.5rem;
+	width: 5rem;
+	color: var(--clr-Violet-400);
+
+	background-color: #fff;
+}
+
+.icon {
+	width: 2rem;
+	height: 2rem;
+}
