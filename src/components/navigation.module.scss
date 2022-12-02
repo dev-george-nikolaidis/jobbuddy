@@ -20,6 +20,7 @@
 .theme_container {
 	display: flex;
 	align-items: center;
+	cursor: pointer;
 	gap: 1.6rem;
 }
 
@@ -34,4 +35,22 @@
 .icon {
 	width: 2rem;
 	height: 2rem;
+}
+
+// / 760px 1024px
+@media (max-width: 64em) {
+	.navigation {
+		grid-template-columns: [full-start] minmax(4rem, auto) [col-start] repeat(12, minmax(4.8rem, 12rem)) minmax(4rem, auto) [full-end];
+		grid-column-gap: 1rem;
+		background-image: url("../assets/tablet/bg-pattern-header.svg");
+	}
+}
+
+// 375 -480px
+@media (max-width: 30em) {
+	.navigation {
+		grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(12, minmax(2rem, 12rem)) minmax(1rem, auto) [full-end];
+		grid-column-gap: 1rem;
+		background-image: url("../assets/mobile/bg-pattern-header.svg");
+	}
 }
