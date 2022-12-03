@@ -1,6 +1,8 @@
 import styles from "./searchBar.module.scss";
 import Search_icon from "../assets/desktop/icon-search.svg";
+import Search_icon_white from "../assets/desktop/icon-search-white.svg";
 import Location from "../assets/desktop/icon-location.svg";
+import Filter_icon from "../assets/mobile/icon-filter.svg";
 
 const SearchBar: React.FC = () => {
 	return (
@@ -23,7 +25,17 @@ const SearchBar: React.FC = () => {
 				</div>
 			</div>
 
-			<div className={styles.search_bar_mobile}></div>
+			<div className={styles.search_bar_mobile}>
+				<input type="text" placeholder="Filter by title…" className={styles.input_text_tablet} />
+				<div className={styles.icons_wrapper}>
+					<div className={styles.filter_wrapper}>
+						<img src={Filter_icon} alt="" className={styles.filter_icon} />
+					</div>
+					<div className={styles.search_wrapper_icon}>
+						<img src={Search_icon_white} alt="" className={styles.search_icon_mobile} />
+					</div>
+				</div>
+			</div>
 		</>
 	);
 };

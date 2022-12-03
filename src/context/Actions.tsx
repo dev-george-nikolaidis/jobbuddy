@@ -1,5 +1,7 @@
 export enum ActionTypes {
-	TEST = "TEST",
+	FETCH_JOBS = "FETCH_JOBS",
+	FETCH_MORE_JOBS = "FETCH_MORE_JOBS",
+	FETCH_SINGLE_JOB = "FETCH_SINGLE_JOB",
 }
 
 export enum PayloadTypes {}

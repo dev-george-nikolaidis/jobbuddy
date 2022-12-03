@@ -1,0 +1,22 @@
+.btn_wrapper {
+	grid-column: 2 / 14;
+	display: flex;
+	justify-content: center;
+	padding: 5.6rem 0 10.4rem 0;
+}
+
+.fetch_btn {
+	width: 14rem;
+	height: 4.8rem;
+	font-weight: 700;
+	color: #fff;
+	background-color: var(--clr-Violet-400);
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: var(--transition);
+}
+
+.fetch_btn:hover {
+	background-color: var(--clr-Violet-300);
+}

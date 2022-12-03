@@ -12,7 +12,10 @@ import { useGeneralContext } from "../context/GeneralContext";
 import { useState } from "react";
 import SearchBar from "./SearchBar";
 
-const Navigation: React.FC = () => {
+interface Props {
+	section?: string;
+}
+const Navigation: React.FC<Props> = ({ section }) => {
 	const {
 		state: {},
 	} = useGeneralContext();
@@ -32,7 +35,7 @@ const Navigation: React.FC = () => {
 					<img src={Dark_icon} alt="" className={`${styles.dark_icon} ${styles.icon}`} />
 				</div>
 			</div>
-			<SearchBar />
+			{section ? null : <SearchBar />}
 		</nav>
 	);
 };

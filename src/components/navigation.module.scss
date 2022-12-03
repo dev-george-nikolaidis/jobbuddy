@@ -49,8 +49,11 @@
 // 375 -480px
 @media (max-width: 30em) {
 	.navigation {
-		grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(12, minmax(2rem, 12rem)) minmax(1rem, auto) [full-end];
+		grid-template-columns: [full-start] minmax(0.5rem, auto) [col-start] repeat(12, minmax(2rem, 12rem)) minmax(0.5rem, auto) [full-end];
 		grid-column-gap: 1rem;
 		background-image: url("../assets/mobile/bg-pattern-header.svg");
+	}
+	.theme_container {
+		margin-right: 2rem;
 	}
 }

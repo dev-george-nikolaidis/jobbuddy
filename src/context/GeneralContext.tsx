@@ -3,8 +3,14 @@ import React, { createContext, Dispatch, ReactNode, useContext, useReducer } fro
 import { Action, Genres } from "./Actions";
 import { reducer } from "./GeneralReducer";
 
-export interface GeneralContextState {}
-const initialState: GeneralContextState = {};
+export interface GeneralContextState {
+	jobs: any;
+	single_job: any;
+}
+const initialState: GeneralContextState = {
+	jobs: [],
+	single_job: [],
+};
 
 type ContextHook = () => {
 	state: GeneralContextState;
