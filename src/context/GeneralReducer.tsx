@@ -9,7 +9,7 @@ export const reducer: ReducerType = (state, action) => {
 			return {
 				...state,
 				// @ts-ignore
-				jobs: JSON.parse(localStorage.getItem("jobs")),
+				jobs: action.payload,
 			};
 		case ActionTypes.FETCH_MORE_JOBS:
 			return {
@@ -20,7 +20,7 @@ export const reducer: ReducerType = (state, action) => {
 			return {
 				...state,
 				// @ts-ignore
-				single_job: JSON.parse(localStorage.getItem("single_job")),
+				single_job: action.payload,
 			};
 
 		default:

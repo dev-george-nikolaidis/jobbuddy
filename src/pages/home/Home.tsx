@@ -11,8 +11,7 @@ const Home: React.FC = () => {
 	const { dispatch } = useGeneralContext();
 
 	useEffect(() => {
-		localStorage.setItem("jobs", JSON.stringify(jobs));
-		dispatch({ type: ActionTypes.FETCH_JOBS });
+		dispatch({ type: ActionTypes.FETCH_JOBS, payload: jobs });
 	}, []);
 
 	return (
