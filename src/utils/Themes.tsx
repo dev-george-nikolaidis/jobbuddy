@@ -1,2 +1,2 @@
 export const defaultTheme = "";
-export const darkTheme = "--clr-text: #fff;  --clr-bg:#2B3844; --clr-body-bg:#202C36; --clr-search:#fff; --clr-span:#ca0000?";
+export const darkTheme = "--clr-white-400: #19202D;  --clr-blue-500:#fff; --clr-grey-300:#121721; --clr-sub-header:#fff; --clr-span:#ca0000?";

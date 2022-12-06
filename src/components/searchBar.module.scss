@@ -1,6 +1,6 @@
 .search_bar {
 	grid-column: 2 / 14;
-	background-color: #fff;
+	background-color: var(--clr-white-400);
 	height: 8rem;
 	margin-top: 4.4rem;
 	border-radius: 6px;
@@ -15,6 +15,7 @@
 	height: 100%;
 	border-radius: 6px 0 0 6px;
 	display: flex;
+
 	align-items: center;
 }
 
@@ -29,10 +30,14 @@
 	width: 80%;
 	border: none;
 	outline: none;
+	background-color: var(--clr-white-400);
+	color: var(--clr-grey-500);
 }
 
 .input_text_tablet {
 	display: none;
+	background-color: var(--clr-white-400);
+	color: var(--clr-grey-500);
 	height: 2rem;
 	width: 80%;
 	border: none;
@@ -59,6 +64,8 @@
 	width: 80%;
 	border: none;
 	outline: none;
+	background-color: var(--clr-white-400);
+	color: var(--clr-grey-500);
 }
 
 .btn_container {
@@ -161,7 +168,7 @@
 		display: block;
 		justify-self: center;
 		grid-column: 2 / 14;
-		background-color: #fff;
+		background-color: var(--clr-white-400);
 		height: 8rem;
 		margin-top: 4.4rem;
 		border-radius: 6px;
@@ -174,6 +181,8 @@
 	.input_text_tablet {
 		margin-left: 2.4rem;
 		width: 10.5rem;
+		background-color: var(--clr-white-400);
+		color: var(--clr-grey-500);
 	}
 
 	.icons_wrapper {

@@ -11,6 +11,7 @@ import { NavLink } from "react-router-dom";
 import { useGeneralContext } from "../context/GeneralContext";
 import { useState } from "react";
 import SearchBar from "./SearchBar";
+import { darkTheme, defaultTheme } from "../utils/Themes";
 
 interface Props {
 	section?: string;
@@ -19,8 +20,50 @@ const Navigation: React.FC<Props> = ({ section }) => {
 	const {
 		state: {},
 	} = useGeneralContext();
+	const [currentTheme, setCurrentTheme] = useState<any>();
 
-	const [isLightTheme, setIsLightTheme] = useState(true);
+	const theme = localStorage.getItem("theme");
+	if (theme) {
+		let parsedTheme = JSON.parse(theme);
+
+		if (parsedTheme === "light") {
+			document.documentElement.style.cssText = defaultTheme;
+		}
+
+		if (parsedTheme === "dark") {
+			document.documentElement.style.cssText = darkTheme;
+		}
+	}
+	const handlerClick = () => {
+		const theme = localStorage.getItem("theme");
+		let parsedTheme = "";
+		// console.log(theme);
+		// set the initial theme value ,run onces
+		if (localStorage.getItem("theme") === null) {
+			document.documentElement.style.cssText = darkTheme;
+			localStorage.setItem("theme", JSON.stringify("dark"));
+
+			return;
+		}
+		if (theme) {
+			parsedTheme = JSON.parse(theme);
+		}
+
+		if (parsedTheme === "light") {
+			document.documentElement.style.cssText = darkTheme;
+			localStorage.setItem("theme", JSON.stringify("dark"));
+			// console.log(parsedTheme);
+			setCurrentTheme("dark");
+
+			return;
+		}
+		// default case
+		if (parsedTheme === "dark") {
+			document.documentElement.style.cssText = defaultTheme;
+			localStorage.setItem("theme", JSON.stringify("light"));
+			setCurrentTheme("light");
+		}
+	};
 	return (
 		<nav className={styles.navigation}>
 			<div className={styles.nav_wrapper}>
@@ -29,9 +72,9 @@ const Navigation: React.FC<Props> = ({ section }) => {
 						<img src={Logo} alt="" className={styles.logo} />
 					</NavLink>
 				</div>
-				<div className={styles.theme_container} onClick={() => setIsLightTheme(!isLightTheme)}>
+				<div className={styles.theme_container}>
 					<img src={Light_icon} alt="" className={`${styles.light_icon} ${styles.icon}`} />
-					{isLightTheme ? <img src={Toggle_on} alt="" /> : <img src={Toggle_off} alt="" />}
+					<span onClick={handlerClick}>{currentTheme === "light" ? <img src={Toggle_on} alt="" /> : <img src={Toggle_off} alt="" />}</span>
 					<img src={Dark_icon} alt="" className={`${styles.dark_icon} ${styles.icon}`} />
 				</div>
 			</div>
