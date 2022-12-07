@@ -11,7 +11,8 @@
 }
 
 .input_container {
-	width: 46rem;
+	flex: 1;
+	// width: 46rem;
 	height: 100%;
 	border-radius: 6px 0 0 6px;
 	display: flex;
@@ -45,6 +46,7 @@
 }
 
 .location_container {
+	flex: 1;
 	width: 30rem;
 	height: 100%;
 	border-right: 1px solid #6e809848;
@@ -69,6 +71,7 @@
 }
 
 .btn_container {
+	flex: 1;
 	display: flex;
 	align-items: center;
 }
@@ -109,6 +112,8 @@
 
 .btn_search {
 	width: 12.3rem;
+	margin-right: 2rem;
+	margin-left: auto;
 	height: 4.8rem;
 	background-color: var(--clr-Violet-400);
 	border: none;
@@ -180,7 +185,7 @@
 
 	.input_text_tablet {
 		margin-left: 2.4rem;
-		width: 10.5rem;
+		width: 80%;
 		background-color: var(--clr-white-400);
 		color: var(--clr-grey-500);
 	}

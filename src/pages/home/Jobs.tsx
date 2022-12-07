@@ -3,9 +3,16 @@ import { useGeneralContext } from "../../context/GeneralContext";
 import { Link } from "react-router-dom";
 const Jobs: React.FC = () => {
 	const {
-		state: { jobs },
+		state: { jobs, filter, filtered_jobs },
 	} = useGeneralContext();
 	let displayJobs;
+	let currentJobs;
+
+	// if (filter && filtered_jobs.length > 0) {
+	// 	currentJobs = jobs;
+	// } else {
+	// 	currentJobs = jobs;
+	// }
 
 	if (jobs) {
 		displayJobs = jobs.map((job: any, index: number) => {

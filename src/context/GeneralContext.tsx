@@ -6,10 +6,16 @@ import { reducer } from "./GeneralReducer";
 export interface GeneralContextState {
 	jobs: any;
 	single_job: any;
+	filter: boolean;
+	filtered_jobs: any;
+	no_jobs_found: boolean;
 }
 const initialState: GeneralContextState = {
 	jobs: [],
 	single_job: [],
+	filter: false,
+	filtered_jobs: [],
+	no_jobs_found: false,
 };
 
 type ContextHook = () => {
